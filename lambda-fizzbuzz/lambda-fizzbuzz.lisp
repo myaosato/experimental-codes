@@ -55,8 +55,8 @@
 ;;Y combinator
 (define-symbol-macro y-comb
   (-> f 
-      (! (-> x (! f x x)) 
-         (-> x (! f x x)))))
+      (! (-> x (_ f x x)) 
+         (-> x (_ f x x)))))
 |#
 
 ;; Z combinator
