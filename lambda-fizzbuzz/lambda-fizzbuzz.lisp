@@ -187,7 +187,7 @@
 (defun to-string (s) (coerce (mapcar #'to-char (to-list s)) 'string))
 
 ;; test
-
+#|
 (eq (to-bool (! _if (! zero? zero) true false)) t)
 (= (to-integer zero) 0)
 (= (to-integer one) 1)
@@ -229,15 +229,20 @@
              "71" "Fizz" "73" "74" "FizzBuzz" "76" "77" "Fizz" "79" "Buzz"
              "Fizz" "82" "83" "Fizz" "Buzz" "86" "Fizz" "88" "89" "FizzBuzz"
              "91" "92" "Fizz" "94" "Buzz" "Fizz" "97" "98" "Fizz" "Buzz"))
-
+|#
 
 ;; expand
 (defun expand (exp)
-  (if (atom exp)
-      (let ((eexp (macroexpand-1 exp)))
-        (if (equal eexp exp)
-            exp
-            (expand eexp)))
-      (mapcar #'expand exp)))
-;;(defun show (exp) (cl-ppcre:regex-replace-all "\\s+" (format nil "~A" (expand exp)) " "))
+  (cond ((atom exp)
+         (let ((eexp (macroexpand-1 exp)))
+           (if (equal eexp exp)
+               exp
+               (expand eexp))))
+        ((or (eq '! (car exp)) (eq '_ (car exp)))
+         (expand (macroexpand-1 exp)))
+        (t (mapcar #'expand exp))))
+
+;(expand exp)
+;(mapcar #'to-string (to-list (eval *)))
+
 
