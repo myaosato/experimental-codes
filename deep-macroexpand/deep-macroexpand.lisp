@@ -1,8 +1,9 @@
 (uiop/package:define-package :deep-macroexpand/deep-macroexpand
-                             (:nicknames :deep-macroexpand) (:use :cl)
-                             (:shadow) (:export :deep-macroexpand) (:intern))
+  (:nicknames :deep-macroexpand)
+  (:use :cl)
+  (:export :deep-macroexpand))
 (in-package :deep-macroexpand/deep-macroexpand)
-;;don't edit above
+
 (defun deep-macroexpand (exp)
   (if (atom exp)
       (let ((eexp (macroexpand exp)))

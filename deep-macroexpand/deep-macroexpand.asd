@@ -1,7 +1,6 @@
-;;don't edit
 (defsystem "deep-macroexpand"
   :author "MIYAO Satoaki"
   :license "MIT"
+  :mailto "tetu60u@yahoo.co.jp"
   :class :package-inferred-system
-  :components((:file "deep-macroexpand"))
-  :mailto "tetu60u@yahoo.co.jp")
+  :depends-on ("deep-macroexpand/deep-macroexpand"))
