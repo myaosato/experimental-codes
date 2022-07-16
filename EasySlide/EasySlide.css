@@ -1,0 +1,86 @@
+html, body, main, header, footer{
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  font-size: 40px;
+}
+main {
+  display: flex;
+  flex-direction: row;
+}
+/* ======================================================================== */
+div.slide.top {
+  color: white;
+  background-color: #51a1a2;
+  box-sizing: border-box;
+}
+div.slide.top h1 {
+  margin: 10% auto 20%;
+  text-align: center;
+  width: 100%;
+  font-size: 120px;
+}
+div.slide.top div#author,
+div.slide.top div#date,
+div.slide.top div#place{
+  text-align: right;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 10%;
+  margin: 20px auto;
+}
+div.slide.top div#author {
+  font-size: 80px;
+}
+div.slide.top div#date {
+  font-size: 40px;
+}
+div.slide.top div#place {
+  font-size: 40px;
+}
+/* ------------------------------------------------------------------------ */
+div.slide div.content {
+  color: #666;
+  box-sizing: border-box;
+  padding-top: 5%;
+  height: 80%;
+  margin: 0px;
+  text-align: center;
+}
+div.slide h2 {
+  margin: 0px;
+  padding: 1%;
+  color: white;
+  background-color: #51a1a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 15%;
+}
+div.slide footer {
+  color: white;
+  background-color: #51a1a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: right;
+  height: 5%;
+  font-size: 30px;
+}
+div.slide div.content ul {
+  margin: auto;
+  text-align: left;
+}
+/* ------------------------------------------------------------------------ */
+div.doubleColumn {
+  display: flex;
+  flex-direction: row;
+}
+
+div.doubleColumn ul,
+div.doubleColumn div,
+div.doubleColumn code{
+  width: 50%;
+}

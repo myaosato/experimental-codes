@@ -1,4 +1,4 @@
-# my-cl-etude
+# experimental-code
 
-Common Lispに関するmyaosatoの習作置き場
-
+- 実験的, 練習コード置き場
+- Common Lisp 多め
