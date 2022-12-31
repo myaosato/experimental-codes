@@ -1,9 +1,9 @@
 <?php
 
-function withOutputToString(?string &$str, callable $callback)
+function withOutputToString(?string &$str, callable $proc)
 {
     $stream = fopen('php://memory', 'w+');
-    $ret = $callback($stream);
+    $ret = $proc($stream);
     $stack = '';
     rewind($stream);
     while (false !== ($c = fgetc($stream))) {
